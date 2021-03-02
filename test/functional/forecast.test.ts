@@ -1,7 +1,7 @@
 import supertest from "supertest";
 
 describe('Beach forecast functional tests', () => {
-  it('should return a forecast with just a few times', async() => {
+  it('should return a forecast with just a few times', async () => {
     const { body, status } = await supertest(app).get('/forecast');
     expect(status).toBe(200);
     expect(body).toBe([{
@@ -35,7 +35,8 @@ describe('Beach forecast functional tests', () => {
         "waveDirection": 232.12,
         "waveHeight": 0.46,
         "windDirection": 310.48
-      }] }
+      }]
+    }
     ]);
   });
 });
